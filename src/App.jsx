@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true, 
-        path:"home",   // "/" → Home
+        path:"home",   // "/" →   Home
         element: <WrappedHome />
       },
       {
