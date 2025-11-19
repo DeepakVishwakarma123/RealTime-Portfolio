@@ -1,0 +1,4 @@
+.menutoggle {
+  max-height: 500px;    /* big enough to fit menu */
+  opacity: 1;
+}
