@@ -9,7 +9,7 @@ function WrappedHome()
         <div className="grid place-content-center">
         <div className="flex gap-2 bg-base-200 justify-center items-center rounded-full p-4">
             <Users/>
-            <div className="size-8 rounded-[50%] bg-blue-400 animate-pulse flex justify-center items-center">
+            <div className="size-8 rounded-[50%] bg-blue-400  animate-pulse flex justify-center items-center">
                 <div className="size-4 rounded-[50%] bg-purple-800 animate-pulse"></div>
             </div>
             <p>5 people viewing this page</p>
@@ -91,9 +91,9 @@ function WrappedHome()
        
        {/* last section  of home */}
 
-       <div className="grid place-content-center">
-        <div className="grid gap-2">
-          <div>
+       <div className="grid  place-content-center p-2">
+           <div className="w-dvh flex flex-col  gap-3 bg-[#EDE9F2] rounded-2xl p-4">
+              <div className="p-2">
             <h2 className="flex gap-2 text-2xl">
                 {/* electric icon */}
                 <Zap/> 
@@ -130,7 +130,7 @@ function WrappedHome()
                 See live cursors of everyone browsing
             </p>
           </div>
-        </div>
+           </div>
         </div>
         </div>
         </>
