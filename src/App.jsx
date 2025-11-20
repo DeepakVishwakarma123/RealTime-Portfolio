@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
 import WrappedHome from "./Components/Home";
 import About from "./Components/About";
-import Profile from "./Components/Profile";
+import ProjectsPage from "./Components/ProjectsPage";
 
 const router = createBrowserRouter([
   {
@@ -11,8 +11,11 @@ const router = createBrowserRouter([
     element: <Layout />, // Layout has NAV + OUTLET
     children: [
       {
-        index: true, 
-        path:"home",   // "/" →   Home
+        index: true,   // "/" →   Home
+        element: <WrappedHome />
+      },
+       {
+        path: "home",                // → "/home"
         element: <WrappedHome />
       },
       {
@@ -21,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "profile", // "/profile"
-        element: <Profile />
+        element: <ProjectsPage />
       }
     ]
   }
