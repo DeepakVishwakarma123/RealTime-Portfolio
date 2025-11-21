@@ -20,7 +20,7 @@ return (
            <li  className="hover:bg-base-300 text-center flex justify-center items-center w-28  rounded-2xl h-12"><NavLink to={"/about"}>About</NavLink></li>
            <li  className="hover:bg-base-300 text-center flex justify-center items-center w-28  rounded-2xl h-12"><NavLink to={"/profile"}>Projects</NavLink></li>
            <li  className="hover:bg-base-300 text-center flex justify-center items-center w-28  rounded-2xl h-12"><NavLink to={"/home"}>Funzone</NavLink></li>
-           <li  className="hover:bg-base-300 text-center flex justify-center items-center w-28  rounded-2xl h-12"><NavLink to={"/home"}>Contact</NavLink></li>
+           <li  className="hover:bg-base-300 text-center flex justify-center items-center w-28  rounded-2xl h-12"><NavLink to={"/contact"}>Contact</NavLink></li>
          </ul>
         <div className="flex gap-4  justify-center items-center">
             <div className="flex justify-center items-center gap-2 bg-base-300 w-16 rounded-full p-2">
