@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import WrappedHome from "./Components/Home";
 import About from "./Components/About";
 import ProjectsPage from "./Components/ProjectsPage";
+import ContactPage from "./Components/ContactPage";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "profile", // "/profile"
         element: <ProjectsPage />
+      },
+        {
+        path: "contact", // "/profile"
+        element: <ContactPage />
       }
     ]
   }
