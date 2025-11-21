@@ -1,11 +1,15 @@
 import { Users ,Sun,Moon,Zap,Check} from "lucide-react";
-import React from "react";
+import SubDescription from "./SubDescripton";
+import HomeCardHeading from "./HomeCardHeading";
+import HomecardSubDescription from "./HomecardSubDescription";
 
 function WrappedHome()
 {
     return (
         <>
         <div className="grid gap-4 p-2">
+
+            {/* make this component later */}
         <div className="grid place-content-center">
         <div className="flex gap-2 bg-base-200 justify-center items-center rounded-full p-4">
             <Users/>
@@ -23,27 +27,16 @@ function WrappedHome()
         </div>
 
         {/* sub heading  */}
-        <div className="grid place-content-center">
-            <div>
-           <h2 className="text-center text-xl  max-w-dvh  text-gray-400">
-            This isn't just a portfolio. It's a real-time multiplayer experience.
-               Every cursor you see is a real person exploring right now.
-            </h2> 
-            </div>
-        </div>
+       <SubDescription 
+       subtext={"This isn't just a portfolio. It's a real-time multiplayer experience. Every cursor you see is a real person exploring right now."}/>
 
         {/* real time reaction */}
         <div className="grid place-content-center p-2">
             {/* center div with a three sub rows */}
             <div className="grid border border-gray-200 rounded-2xl gap-10 p-4 w-dvh">
-                <div className="flex justify-center items-center p-2">
-                    <h2 className="text-2xl font-medium">
-                        Real-time Emoji Reactions
-                    </h2>
-                </div>
-                <div className="flex justify-center items-center">
-                    <p>Click an emoji and watch it appear on everyone's screen</p>
-                </div>
+                <HomeCardHeading HeadingCard={"Real-time Emoji Reactions"}/>
+                <HomecardSubDescription subTextOfcard={"Click an emoji and watch it appear on everyone's screen"}/>
+
                 <div className="flex justify-center items-center gap-6 p-2">
                             <div className="bg-green-500 size-12"></div>
                              <div className="bg-red-500 size-12"></div>
@@ -59,14 +52,10 @@ function WrappedHome()
           <div className="grid place-content-center p-2">
             {/* center div with a three sub rows */}
             <div className="grid border border-gray-200 rounded-2xl gap-10 p-4 w-dvh">
-                <div className="flex justify-center items-center p-2">
-                    <h2 className="text-2xl font-medium">
-                       Theme Flash Voting
-                    </h2>
-                </div>
-                <div className="flex justify-center items-center">
-                    <p>Vote for your preferred theme — everyone sees a flash!</p>
-                </div>
+                 <HomeCardHeading 
+                 HeadingCard={"Theme Flash Voting"}/>
+                 <HomecardSubDescription 
+                 subTextOfcard={"Vote for your preferred theme — everyone sees a flash!"}/>
                 <div className="grid gap-2">
                            <div className="grid grid-cols-2 gap-2">
                                <div className="grid gap-2 border border-gray-200 p-1 rounded-2xl">
