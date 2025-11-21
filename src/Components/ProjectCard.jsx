@@ -1,50 +1,55 @@
 import {Eye, MessageSquare} from "lucide-react"
 
-export default function ProjectCard({bgImageUrl,projectHeading,projectDescription,skillArray})
-{   
-    let customeUrl=`url("${bgImageUrl}")`
+export default function ProjectCard({ bgImageUrl, projectHeading, projectDescription, skillArray, onAddReaction, onAddComment, onSendNote }) {
+    const customeUrl = `url("${bgImageUrl}")`;
+
     return (
-        <div className="grid  bg-base-300 w-dvh gap-5">
-            {/* use skill array to iterate over the skills and show case in button component */}
-         <div className="bg-cover rounded-t-2xl  h-40 flex justify-center items-center" style={
-            {
-                backgroundImage:customeUrl
-            }
-         }>
-            <Eye/>
-         </div>
-            {/* second row starts here */}
-         <div>
-            <div>
+      <div className="grid  bg-white border-2 rounded-2xl group  hover:shadow-xs transition-all duration-300   shadow-gray-400  border-base-300">
+        {/* firt row */}
+        <div className="bg-purple-400 rounded-t-2xl h-52 flex justify-center items-center">
+            <img src={bgImageUrl} alt="project image" className="rounded-t-2xl   object-cover" style={{width:"100%",height:"100%"}} />
+        <Eye color="white" className="hidden  absolute group-hover:block"/>
+        </div>
+        
+
+        {/* second row as a container */}
+        <div className="grid p-4 gap-2">
+        <div className="grid gap-3">
+            <div className="text-2xl">
                 {projectHeading}
             </div>
             <div>
                 {projectDescription}
             </div>
-            {/* technology used itenrate over the skill array*/}
-            <div className="flex">
-                {/* here used an component instead of these repeated terms and iterate on it */}
-                <button className="btn btn-ghost">WebGl</button>
-                <button className="btn btn-ghost">Canvas</button>
-                <button className="btn btn-ghost">Multiplayer</button>
+            {/* iterate here */}
+            <div className="flex gap-2">
+<button className="btn btn-ghost bg-base-300">hello</button>
+<button className="btn btn-ghost bg-base-300">hello</button>
+<button className="btn btn-ghost bg-base-300">hello</button>
             </div>
-            {/* project reaction section  */}
-            <div>
-                <div>
-                    <button className="btn btn-ghost"> Add reaction</button>
-                </div>
-            </div>
-        </div>  
-        {/* third row starts here acts as todo for user comments */}
-        <div className="flex gap-2">
-            {/* text box with button icon msg */}
-         <div className="bg-amber-400">
-            <input type="text" placeholder="Leve note.."></input>
-         </div>
-         <div>
-            <MessageSquare/>
-         </div>
+        </div>
+        {/* third row */}
+        <div className="grid gap-2">
+            {/* first row with a add reactino button and emoji */}
+             <div className="flex  gap-2">
+                <button className="btn btn-ghost">Add reaction</button>
+                <div className="flex justify-center items-center">emoji..add</div>
+             </div>
+             {/* add second row here next time row of reationed emjies or compnent */}
+
+   
+
+             {/* third row */}
+             <div className="flex  gap-2">
+                <input type="text" placeholder="Type here" className="input" />
+                <button className="btn btn-ghost bg-primary">
+                <MessageSquare/>
+                </button>
+             </div>
         </div>
         </div>
-    )
+
+        
+      </div>
+    );
 }
