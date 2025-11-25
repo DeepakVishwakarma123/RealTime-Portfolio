@@ -3,9 +3,23 @@ import InfoIndicator from "./InfoIndicator"
 import SectionCard from "./SectionCard"
 import PageBigHeading from "./PageBigHeading"
 import SubDescription from "./SubDescripton"
+import { useOthers } from "@liveblocks/react"
+import UseActiveUserOnpage from "../Hooks/UseContext"
+import { useEffect } from "react"
 
 
 export default function About() {
+    
+  let [activeuserState,setactiveuser]=UseActiveUserOnpage()
+  let others=useOthers()
+
+     useEffect(
+        () => {
+        let TotalActiveUser=others.length
+        setactiveuser(TotalActiveUser)
+    },[others]
+     )
+
   return (
     <div className="grid p-2 gap-6">
        <PageBigHeading bigText={"About"}/>
