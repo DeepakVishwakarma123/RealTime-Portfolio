@@ -5,11 +5,14 @@ import { useRef, useState } from "react"
 import {Link,NavLink} from "react-router-dom"
 import UseActiveUserOnpage from "../Hooks/UseContext"
 import { Loader2 } from "lucide-react"
+import { UseRandomName } from "../Hooks/UseContext"
+
 function NavBar()
 {
 
 const ref=useRef()
 let [activeuserState,setactiveuser]=UseActiveUserOnpage()
+let randomName=UseRandomName()
 return (
     <>
     <nav className="flex justify-between p-4 sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-2 border-base-300 border-l-0 border-r-0">
@@ -34,7 +37,7 @@ return (
              </p>
             </div>
             <div>
-                <p>userNamme</p>
+                <p>{randomName}</p>
             </div>
         </div>
     </nav>
