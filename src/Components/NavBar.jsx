@@ -1,11 +1,15 @@
 import { Users } from "lucide-react"
 import { Menu } from "lucide-react"
 import "./MenuToggle.css"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import {Link,NavLink} from "react-router-dom"
+import UseActiveUserOnpage from "../Hooks/UseContext"
+import { Loader2 } from "lucide-react"
 function NavBar()
 {
-    const ref=useRef()
+
+const ref=useRef()
+let [activeuserState,setactiveuser]=UseActiveUserOnpage()
 return (
     <>
     <nav className="flex justify-between p-4 sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-2 border-base-300 border-l-0 border-r-0">
@@ -25,7 +29,9 @@ return (
         <div className="flex gap-4  justify-center items-center">
             <div className="flex justify-center items-center gap-2 bg-base-300 w-16 rounded-full p-2">
             <Users col size={18} strokeWidth={1.2}/>
-             <p>4</p>
+             <p>
+                {activeuserState?activeuserState:<Loader2 className="animate animate-spin"/>}
+             </p>
             </div>
             <div>
                 <p>userNamme</p>
