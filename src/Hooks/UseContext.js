@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import ActiveUserOnpage from "../Context/context";
 import { ThemeContext } from "../Context/context";
+import { RandomNameContext } from "../Context/context";
 
 function UseActiveUserOnpage()
 {
@@ -14,5 +15,11 @@ function UseTheme()
     return CurrentThemeStatus
 }
 
+function UseRandomName()
+{
+    const [randomName]=useContext(RandomNameContext)
+    return randomName
+}
+
 export default UseActiveUserOnpage
-export {UseTheme}
+export {UseTheme,UseRandomName}
